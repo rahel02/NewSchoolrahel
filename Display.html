@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+ <center><h1>mit ohren sehen können</h1></center>   
+
+
+<style>
+  body {
+    font-family: "Neue Display Ultra";
+    background-color: #f0f0f0;
+  }
+    @font-face {
+    font-family: "Neue Display Ultra";
+    src: url("https://db.onlinewebfonts.com/t/b356e676349fe49ad53f6ff255a0297e.eot");
+    src: url("https://db.onlinewebfonts.com/t/b356e676349fe49ad53f6ff255a0297e.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b356e676349fe49ad53f6ff255a0297e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b356e676349fe49ad53f6ff255a0297e.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b356e676349fe49ad53f6ff255a0297e.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b356e676349fe49ad53f6ff255a0297e.svg#Neue Display Ultra")format("svg");
+}
+     @import url(https://db.onlinewebfonts.com/c/b356e676349fe49ad53f6ff255a0297e?family=Neue+Display+Ultra);
+  .audio-container {
+    max-width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  audio {
+    flex: 1;
+    margin-right: 10px;
+  }
+  .play-button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="audio-container">
+  <audio id="audioPlayer" controls>
+    <source src="Display%202.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button class="play-button" id="playButton">&#9658;</button>
+</div>
+
+<script>
+  const audio = document.getElementById('audioPlayer');
+  const playButton = document.getElementById('playButton');
+
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playButton.innerHTML = '&#9646;&#9646;';
+    } else {
+      audio.pause();
+      playButton.innerHTML = '&#9658;';
+    }
+  });
+    
+</script>
+</body>
+</html>
+
+
+
+<center><p><a href="RahelsProjekte.html">HOME</a></p></center>
